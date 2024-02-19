@@ -10,7 +10,7 @@
 
       <?php
             include "conexao.php";
-            $id = $GET['id'] ?? '';
+            $id = $_GET['id'] ?? '';
             $sql = "SELECT * FROM pessoas WHERE cod_pessoa = $id";
 
             $dados = mysqli_query($conn, $sql);
