@@ -10,7 +10,7 @@
     <div class="container">
         <div class="row">
           <div class="col">
-            <div class="jumbotron">
+            <div class="jumbotron text-center">
                 <h1 class="display-4">Cadastro web</h1>
                 <p class="lead">Esse é um sistema simplificado de cadastros. Trabalho de conclusão do curso Análise e Desenvolvimento de Sistemas
                     da UNIASSELVI.</p>
