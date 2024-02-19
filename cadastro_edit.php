@@ -32,9 +32,9 @@
           </div>
           <div class="mb-3">
                 <label for="telefone">Telefone</label>
-                <input type="text" class="form-control" name="telefone" value=" <?php echo $linha['telefone'];?>>
+                <input type="text" class="form-control" name="telefone" value=" <?php echo $linha['telefone'];?>">
           </div>
-          <div class="mb-3>
+          <div class="mb-3">
                 <label for="email">Email</label>
                 <input type="email" class="form-control" name="email" value=" <?php echo $linha['email'];?>">
           </div>
