@@ -36,10 +36,6 @@
                 <input type="date" class="form-control" name="data_nascimento">
           </div>
           <div class="mb-3">
-                <label for="foto">Foto</label>
-                <input type="file" class="form-control" name="foto" accept="image/*">
-          </div>
-          <div class="mb-3">
                 <input type="submit" class="btn btn-success">
           </div>
           </form>
