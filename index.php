@@ -20,8 +20,8 @@
 
                   <div class="form group">
                     <label for="exampleInputEmail1" class="form-label">Login</label>
-                    <input type="text" class="form-control" name="login">
-                    <div name="login" class="form-text">Entre com seus dados de acesso.</div>
+                    <input type="text" class="form-control" name="usuario">
+                    <div name="usuario" class="form-text">Entre com seus dados de acesso.</div>
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Senha</label>
@@ -31,12 +31,12 @@
 
                 </form>
                 <?php
-                    if(isset($_POST['login'])) {
-                      $login = $_POST['login'];
+                    if(isset($_POST['usuario'])) {
+                      $login = $_POST['usuario'];
                       $senha = md5($_POST['senha']);
 
                       include "conexao.php";
-                      $sql = "SELECT * from `usuarios` WHERE login = '$login' AND senha = '$senha'";
+                      $sql = "SELECT * from `usuarios` WHERE usuario = '$login' AND senha = '$senha'";
 
                       if ($result = mysqli_query($conn, $sql)) {
                          $num_registros = mysqli_num_rows($result);
@@ -44,15 +44,15 @@
                          if($num_registros == 1) {
                           $linha = mysqli_fetch_assoc($result);
   
-                          if(($login == $linha['login']) and ($senha ==$linha['senha'])) {
+                          if(($login == $linha['usuario']) and ($senha ==$linha['senha'])) {
                             session_start();
-                            $_SESSION['login'] = "marcio";
+                            $_SESSION['usuario'] = "marcio";
                             header("location: home.php");
                           } else {
-                            echo "Login ou senha inválidos";
+                            echo "Usuário ou senha inválidos";
                           }
                           }else {
-                            echo "Loginou senha não encontrados ou inválidos";
+                            echo "Usuário  senha não encontrados ou inválidos";
                           }
                         }  else { echo "Nenhum resultado foi encontrado ";}
                       }
