@@ -21,29 +21,30 @@
         <div class="row">
           <div class="col">
           <h1>Alteração de cadastro</h1>
-          <form action="cadastro_script.php" method="POST">
+          <form action="edit_script.php" method="POST">
           <div class="mb-3">
                 <label for="nome">Nome completo</label>
-                <input type="text" class="form-control" name="nome" required value=" <?php echo $linha['nome'];?>">
+                <input type="text" class="form-control" name="nome" required value="<?php echo $linha['nome'];?>">
           </div>
           <div class="mb-3">
                 <label for="endeereco">Endereço</label>
-                <input type="text" class="form-control" name="endereco" value=" <?php echo $linha['endereco'];?>">
+                <input type="text" class="form-control" name="endereco" value="<?php echo $linha['endereco'];?>">
           </div>
           <div class="mb-3">
                 <label for="telefone">Telefone</label>
-                <input type="text" class="form-control" name="telefone" value=" <?php echo $linha['telefone'];?>">
+                <input type="text" class="form-control" name="telefone" value="<?php echo $linha['telefone'];?>">
           </div>
           <div class="mb-3">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" name="email" value=" <?php echo $linha['email'];?>">
+                <input type="email" class="form-control" name="email" value="<?php echo $linha['email'];?>">
           </div>
           <div class="mb-3">
                 <label for="data_nascimento">Data de nascimento</label>
-                <input type="date" class="form-control" name="data_nascimento" value=" <?php echo $linha['data_nascimento'];?>">
+                <input type="date" class="form-control" name="data_nascimento" value="<?php echo $linha['data_nascimento'];?>">
           </div>
           <div class="mb-3">
                 <input type="submit" class="btn btn-success" value="Salvar Alterações">
+                <input type="hidden" name="id" value="<?php echo $linha['cod_pessoa'];?>">
           </div>
           </form>
           <a href="index.php" class="btn btn-info">Voltar para o início</a>
